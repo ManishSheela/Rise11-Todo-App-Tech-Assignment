@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const baseURL = process.env.REACT_APP_BASE_URL;
+const baseURL = process.env.REACT_APP_BASE_URL || 'https://todo-app-backend-nine-alpha.vercel.app';
 const Login = () => {
 	const emailRef = useRef(null);
 	const passwordRef = useRef(null);
