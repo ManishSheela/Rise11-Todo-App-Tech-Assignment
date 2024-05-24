@@ -1,10 +1,12 @@
 import React from "react";
 import Avatar from "react-avatar";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Header = ({ details }) => {
+	const navigate = useNavigate();
 	const handleLogout = () => {
+		console.log("click");
 		localStorage.removeItem("accessToken");
-		return <Navigate to={"/auth/login"} replace />;
+		navigate("/auth/login");
 	};
 	return (
 		<div className="heading">
@@ -14,7 +16,11 @@ const Header = ({ details }) => {
 					name={details?.name}
 					size="35"
 					round="20px"
-					color={Avatar.getRandomColor("sitebase", ["#6c63ff", "#FFA62F", "#A1DD70"])}
+					color={Avatar.getRandomColor("sitebase", [
+						"#6c63ff",
+						"#FFA62F",
+						"#A1DD70",
+					])}
 				/>
 				<button onClick={handleLogout} className="btn">
 					Logout
