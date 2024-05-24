@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+const baseURL = "http://localhost:5513";
 const Login = () => {
 	const emailRef = useRef(null);
 	const passwordRef = useRef(null);
@@ -12,13 +13,10 @@ const Login = () => {
 		const email = emailRef.current?.value;
 		const password = passwordRef.current?.value;
 		try {
-			const response = await axios.post(
-				"http://localhost:5513/api/users/login",
-				{
-					email,
-					password,
-				}
-			);
+			const response = await axios.post(`${baseURL}/api/users/login`, {
+				email,
+				password,
+			});
 			const accessToken = response?.data?.accessToken;
 			if (accessToken) {
 				localStorage.setItem("accessToken", accessToken);

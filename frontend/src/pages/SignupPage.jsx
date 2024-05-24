@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+const baseURL = "http://localhost:5513";
 const Signup = () => {
 	const nameRef = useRef(null);
 	const emailRef = useRef(null);
@@ -15,14 +16,11 @@ const Signup = () => {
 		const email = emailRef.current?.value;
 		const password = passwordRef.current?.value;
 		try {
-			const response = await axios.post(
-				"http://localhost:5513/api/users/register",
-				{
-					name,
-					email,
-					password,
-				}
-			);
+			const response = await axios.post(`${baseURL}/api/users/register`, {
+				name,
+				email,
+				password,
+			});
 			const accessToken = response?.data?.accessToken;
 
 			if (accessToken) {
