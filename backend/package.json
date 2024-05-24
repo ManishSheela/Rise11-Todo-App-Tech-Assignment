@@ -1,0 +1,32 @@
+{
+  "name": "rise11",
+  "version": "1.0.0",
+  "description": "this is rise11 to-do task for mern stack developer",
+  "main": "server.js",
+  "type": "module",
+  "exports": {
+    "require": "./server.cjs",
+    "import": "./server.js"
+  },
+  "scripts": {
+    "dev": "nodemon server.ts"
+  },
+  "keywords": [
+    "mern",
+    "backend",
+    "frontend",
+    "rise11",
+    "todo",
+    "list"
+  ],
+  "author": "Manish Sheela",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.0"
+  }
+}

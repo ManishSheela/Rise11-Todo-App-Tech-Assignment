@@ -1,0 +1,91 @@
+.todoContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--dark);
+}
+
+.wrapper {
+	position: relative;
+	height: 90%;
+	width: 600px;
+	max-width: 600px;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: var(--secondary);
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.task {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+	border-bottom: 1px solid var(--primary);
+}
+.searchInput {
+	margin-bottom: 30px;
+}
+.searchInput input {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 16px;
+	outline: none;
+	border: 1px solid var(--primary);
+}
+.searchInput input::placeholder {
+	color: #c3c1e5;
+}
+.left {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+input[type="checkbox"] {
+	width: 20px; /* Default width */
+	height: 20px; /* Default height */
+	cursor: pointer;
+	border: 1px solid red;
+}
+
+input[type="checkbox"]:checked {
+	background-color: green;
+}
+.completedTask {
+	text-decoration: line-through;
+	color: gray;
+}
+.right {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+}
+.delete {
+	color: rgb(253, 118, 118);
+	font-size: 22px;
+}
+.edit {
+	color: var(--primary);
+	font-size: 22px;
+}
+.addButton {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	height: 50px;
+	width: 50px;
+	padding: 4px;
+	border-radius: 50%;
+	background-color: var(--primary);
+	color: white;
+	cursor: pointer;
+}
+.addIcon {
+	font-size: 42px;
+}
+.taskWrapper {
+	overflow-y: auto;
+}

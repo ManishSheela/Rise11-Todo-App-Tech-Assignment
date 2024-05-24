@@ -1,0 +1,197 @@
+/* Google Fonts - nunito */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+:root {
+	--primary: #6c63ff;
+	--secondary: #f7f7f7;
+	--dark: #252525;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Nunito", sans-serif;
+}
+.container {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 30px;
+}
+.heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 700;
+	font-size: 20px;
+	padding: 10px 0px 20px 0px;
+	text-transform: uppercase;
+	color: var(--dark);
+}
+.btn {
+	outline: none;
+	border: none;
+	color: #fff;
+	background-color: var(--primary);
+	transition: all 0.3s ease;
+	cursor: pointer;
+	padding: 8px 12px;
+	border-radius: 5px;
+	margin-left: 10px;
+}
+.form {
+	position: absolute;
+	max-width: 430px;
+	width: 100%;
+	padding: 30px;
+	border-radius: 6px;
+	background: #fff;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.form.signup {
+	opacity: 1;
+}
+.forms.show-signup .form.signup {
+	opacity: 1;
+}
+/* .forms.show-signup .form.login {
+	opacity: 0;
+	pointer-events: none;
+} */
+header {
+	font-size: 28px;
+	font-weight: 600;
+	color: #232836;
+	text-align: center;
+}
+form {
+	margin-top: 30px;
+}
+.form .field {
+	position: relative;
+	height: 50px;
+	width: 100%;
+	margin-top: 20px;
+	border-radius: 6px;
+}
+.field input,
+.field button {
+	height: 100%;
+	width: 100%;
+	border: none;
+	font-size: 16px;
+	font-weight: 400;
+	border-radius: 6px;
+}
+.field input {
+	outline: none;
+	padding: 0 15px;
+	border: 1px solid#CACACA;
+}
+.field input:focus {
+	border-bottom-width: 2px;
+}
+.eye-icon {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	font-size: 18px;
+	color: #8b8b8b;
+	cursor: pointer;
+	padding: 5px;
+}
+.field button {
+	color: #fff;
+	background-color: var(--primary);
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+.field button:hover {
+	background-color: #8f8af5;
+}
+.form-link {
+	text-align: center;
+	margin-top: 10px;
+}
+.form-link span,
+.form-link a {
+	font-size: 14px;
+	font-weight: 400;
+	color: #232836;
+}
+.form a {
+	color: var(--primary);
+	text-decoration: none;
+}
+.form-content a:hover {
+	text-decoration: underline;
+}
+.line {
+	position: relative;
+	height: 1px;
+	width: 100%;
+	margin: 36px 0;
+	background-color: #d4d4d4;
+}
+.line::before {
+	content: "Or";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	color: #8b8b8b;
+	padding: 0 15px;
+}
+.media-options a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (max-width: 400px) {
+	.form {
+		padding: 20px 10px;
+	}
+}
+
+.ModelContainer {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(100, 100, 111, 0.5);
+	z-index: 100;
+	transition: all 0.5s;
+}
+.modelWrapper {
+	padding : 15px;
+	width: 350px;
+	height: 180px;
+	background-color: white;
+	border-radius: 10px;
+}
+.cancel-btn {
+	background-color: white !important;
+	border: 1px solid var(--primary);
+	color: var(--primary);
+	margin-left : 0px  !important;
+}
+.model-button{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;;
+}
+
+.addInput input {
+	
+}
+.addInput input::placeholder {
+	color: #c3c1e5;
+}
