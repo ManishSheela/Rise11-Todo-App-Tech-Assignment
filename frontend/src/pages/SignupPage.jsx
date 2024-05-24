@@ -25,7 +25,7 @@ const Signup = () => {
 
 			if (accessToken) {
 				localStorage.setItem("accessToken", accessToken);
-				navigate("/dashboard", { replace: true });
+				navigate("/", { replace: true });
 			}
 		} catch (err) {
 			console.error("Error logging in:", err.message);

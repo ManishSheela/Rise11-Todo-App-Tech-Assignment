@@ -20,7 +20,7 @@ const Login = () => {
 			const accessToken = response?.data?.accessToken;
 			if (accessToken) {
 				localStorage.setItem("accessToken", accessToken);
-				navigate("/dashboard", { replace: true });
+				navigate("/", { replace: true });
 			}
 			// Handle successful login, e.g., storing tokens, redirecting, etc.
 		} catch (error) {

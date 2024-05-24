@@ -5,7 +5,7 @@ import Login from "./pages/LoginPage";
 import AuthLayout from "./layouts/AuthLayout";
 
 const router = createBrowserRouter([
-	{ path: "/dashboard", element: <Dashboard /> },
+	{ path: "/", element: <Dashboard /> },
 	{
 		path: "/auth",
 		element: <AuthLayout />,
