@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:5513";
+const baseURL = process.env.REACT_APP_BASE_URL;
+console.log(process.env);
 const _fetchTodos = async (authToken) => {
 	try {
 		const response = await axios.get(`${baseURL}/api/todos`, {

@@ -49,15 +49,17 @@ const Dashboard = () => {
 		}
 	};
 	useEffect(() => {
-		const fetchTodos = async () => {
-			try {
-				const res = await _fetchTodos(accessToken);
-				setTodos(res);
-			} catch (err) {
-				console.error("Error fetching todos:", err.message);
-			}
-		};
-		fetchTodos();
+		if (accessToken) {
+			const fetchTodos = async () => {
+				try {
+					const res = await _fetchTodos(accessToken);
+					setTodos(res);
+				} catch (err) {
+					console.error("Error fetching todos:", err.message);
+				}
+			};
+			fetchTodos();
+		}
 	}, []);
 
 	if (!accessToken) {
